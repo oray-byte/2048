@@ -20,9 +20,11 @@ class Game(tkr.Frame):
         self.init_window()
         
     def init_window(self):
-        canvasFrame = tkr.Frame(self.master, bg="gray34")
+        canvas = tkr.Canvas(self.master, bg="gray34")
         
-        canvasFrame.pack(side=tkr.TOP, expand=tkr.TRUE, fill=tkr.BOTH)
+        canvas.create_rectangle(50, 50, 50, 50, fill="blue", outline="white")
+        
+        canvas.pack(side=tkr.TOP, expand=tkr.TRUE, fill=tkr.BOTH)
     
 master = tkr.Tk()
 game = Game(master)
